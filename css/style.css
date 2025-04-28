@@ -1,0 +1,105 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family:Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+h2{
+    text-align:center;
+  }
+
+li{
+    margin-top: 20px;
+}
+
+img{
+    border: 5px solid blue;
+    border-radius: 35px;
+    height: 150px;
+  }
+
+.label{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* First Media Query: Mobile styles for screens up to 600px */
+@media (max-width: 600px) {
+  body {
+    font-size: 18px;
+    margin: 5px;
+    padding: 2px;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+  figure {
+    text-align: center;
+  }
+}
+
+/* Second Media Query: Tablet styles for screens up to 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  img {
+    max-width: 100%;
+  }
+  figure {
+    text-align: center;
+  }
+}
+
+/* Third Media Query: Desktop styles for screens above 900px */
+@media (min-width: 901px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+  }
+  img {
+    max-width: 100%;
+  }
+  figure {
+    text-align: center;
+  }
+}
+
+/* Fourth Media Query: Large desktop styles for screens above 1200px */
+@media (min-width: 1200px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 28px;
+  }
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+  figure {
+    padding: 16px;
+    border-radius: 12px;
+  }
+}
